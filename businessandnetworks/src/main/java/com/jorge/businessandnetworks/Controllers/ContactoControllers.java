@@ -3,13 +3,12 @@ package com.jorge.businessandnetworks.Controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@Controller("/contacto")
+public class ContactoControllers {
 
-@Controller
-public class SiteControllers {
-
-    @GetMapping("/")
-    public String home(){
-        return "/www/site/index.html";
+    @GetMapping("/contacto")
+    public String contacto(){
+        return "/www/site/contacto.html";
     }
 
 }
