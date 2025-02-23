@@ -1,10 +1,18 @@
-<html xmlns="http://www.thymeleaf.org" 
-        layout:decorate="~{/layout/base}">
-
-    <div layout:fragment="content">
-        <div class="row">
-            <div class="col">
-                <h1>Bienvenido a Mi Empresa</h1>
-                <p>Este es el sitio web de mi empresa</p>
-            </div>
+<html xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{/www/layout/base}">
+  
+    <div layout:fragment="MainBase">
+        <!-- Contenido principal -->
+        <div class="container">
+            <section id="index" class="bg-primary text-white text-center py-5">
+                <h2>Bienvenido a la Página Principal</h2>
+                <p>Puedes comunicarte con nosotros a través de nuestra sección de contacto.</p>
+                
+                <div class="mt-4">
+                    <a href="/about" class="btn btn-light btn-lg">Más sobre nosotros</a>
+                </div>
+            </section>
         </div>
+    </div>
+
+</html>

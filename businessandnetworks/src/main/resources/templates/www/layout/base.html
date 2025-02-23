@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="${titulo}">Mi Aplicación</title>
+    <title th:text="'Inicio - ' + ${titulo}">Página de Inicio</title>
+    <!-- Vincular con Bootstrap 5.3.3 -->
     <link rel="stylesheet" href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
 </head>
 <body>
 
-    <!-- Incluir el header -->
-    <header th:replace="~{componets/header :: header}"></header>
+    <!-- Header -->
+    <header th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">Mi Empresa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
     <main class="container mt-4">
-        <th:block th:insert="~{::content}"></th:block>
+        <div layout:fragment="MainBase">
+            <!-- Aquí se insertará el contenido específico de cada página -->
+        </div>
     </main>
 
-    <!-- Incluir el footer -->
-    <footer th:replace="~{componetsfooter :: footer}"></footer>
+    <!-- Footer -->
+    <footer th:fragment="footer" class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 Mi Empresa - Todos los derechos reservados.</p>
+            <p>Diseñado con ♥ para mejorar tu negocio.</p>
+        </div>
+    </footer>
 
+    <!-- Scripts -->
     <script src="/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

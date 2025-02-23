@@ -70,6 +70,7 @@
 			<artifactId>materialize</artifactId>
 			<version>1.0.0-rc.2</version>
 		</dependency> -->
+		
 
 		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
 		<dependency>
@@ -77,6 +78,12 @@
     		<artifactId>bootstrap</artifactId>
     		<version>5.3.3</version>
 		</dependency>
+		<dependency>
+    		<groupId>nz.net.ultraq.thymeleaf</groupId>
+    		<artifactId>thymeleaf-layout-dialect</artifactId>
+    		<version>3.0.0</version>
+		</dependency>
+
 
 
 		<!-- Fin de dependencias de la vista -->
